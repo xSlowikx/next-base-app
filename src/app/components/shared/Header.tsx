@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/mode-toggle";
 import Image from "next/image";
 
 export default function Header() {
@@ -8,12 +9,9 @@ export default function Header() {
           <Image src="/logo.png" alt="Logo" width={35} height={50} />
           <span className="ml-3 text-xl">Docenza</span>
         </a>
-        {/* <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-white">Log in</a>
-          <a className="mr-5 bg-white px-4 py-2 rounded hover:text-white">
-            Sign in
-          </a>
-        </nav> */}
+        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <ModeToggle />
+        </nav>
       </div>
     </header>
   );

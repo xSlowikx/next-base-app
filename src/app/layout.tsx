@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/shared/Header";
 import Footer from "./components/shared/Footer";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Docenza",
@@ -19,11 +20,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
-        <Header></Header>
-        <main className="flex-1 flex items-center justify-center">
-          {children}
-        </main>
-        <Footer></Footer>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header></Header>
+          <main className="flex-1 flex items-center justify-center">
+            {children}
+          </main>
+          <Footer></Footer>
+        </ThemeProvider>
       </body>
     </html>
   );
