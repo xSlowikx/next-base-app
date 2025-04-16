@@ -27,7 +27,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header></Header>
-          <main className="flex-1 flex items-center justify-center mx-auto">
+          <main className="mx-auto">
             {children}
           </main>
           <Footer></Footer>

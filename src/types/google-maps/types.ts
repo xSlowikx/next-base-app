@@ -4,4 +4,11 @@ export type MarkersProps = {
 	location: google.maps.LatLngLiteral;
     detail?: string;
     specializations?: string;
+	matching_types?: MatcherTypes[];
 };
+
+export enum MatcherTypes  {
+	FEATURED = "featured",
+	RECOMMENDED = "recommended",
+	DEFAULT = "default",
+}
