@@ -1,18 +1,27 @@
-import { ModeToggle } from "@/components/mode-toggle";
 import Image from "next/image";
+import ThemeToggle from "../header/ThemeToggle";
+import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="text-gray-400 bg-gray-900 body-font">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-          <Image src="/logo.png" alt="Logo" width={35} height={50} />
-          <span className="ml-3 text-xl">Docenza</span>
-        </a>
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <ModeToggle />
-        </nav>
-      </div>
+    <header className="bg-[#F6EFE5] body-font">
+      <nav className="container flex flex-wrap p-4 flex-row justify-between items-center mx-auto">
+        <Link
+          href={"/home"}
+          className="flex title-font font-medium items-end relative w-25 h-15 md:w-28 md:h-18"
+        >
+          <Image
+            src="/docenza.png"
+            alt="Logo Docenza"
+            fill
+            className="object-contain"
+            priority
+          />
+        </Link>
+        <div>
+          <ThemeToggle />
+        </div>
+      </nav>
     </header>
   );
 }

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "../lib/fontawesome";
 import Header from "./components/shared/Header";
 import Footer from "./components/shared/Footer";
-import { ThemeProvider } from "@/components/theme-provider";
+// import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Docenza",
@@ -20,18 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >
-          <Header></Header>
-          <main className="mx-auto">
-            {children}
-          </main>
-          <Footer></Footer>
-        </ThemeProvider>
+        > */}
+        <Header></Header>
+        <main>{children}</main>
+        <Footer></Footer>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
