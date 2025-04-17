@@ -75,7 +75,7 @@ const Footer = () => {
                       className="text-lg lg:text-xl bg-white text-[#4f7a44] p-2 rounded-md curser-pointer cursor-pointer hover:bg-[#aab9a5]"
                     />
                   </Link>
-                  <Link href={"https://twitter.com"}>
+                  <Link href={"https://instagram.com"}>
                     <FontAwesomeIcon
                       icon={faInstagram}
                       className="text-lg bg-white text-[#4f7a44] p-2 rounded-md curser-pointer cursor-pointer hover:bg-[#aab9a5]"
