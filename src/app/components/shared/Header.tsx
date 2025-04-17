@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ThemeToggle from "../header/ThemeToggle";
+import UserProfile from "../header/UserProfile";
 import Link from "next/link";
 
 export default function Header() {
@@ -18,8 +19,9 @@ export default function Header() {
             className="w-25 h-15 md:w-28 md:h-18"
           />
         </Link>
-        <div>
+        <div className="flex items-center justify-end gap-4">
           <ThemeToggle />
+          <UserProfile />
         </div>
       </nav>
     </header>
