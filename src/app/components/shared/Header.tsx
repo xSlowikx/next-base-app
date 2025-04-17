@@ -8,14 +8,14 @@ export default function Header() {
       <nav className="container flex flex-wrap p-4 flex-row justify-between items-center mx-auto">
         <Link
           href={"/home"}
-          className="flex title-font font-medium items-end relative w-25 h-15 md:w-28 md:h-18"
+          className="flex title-font font-medium items-end relative "
         >
           <Image
             src="/docenza.png"
             alt="Logo Docenza"
-            fill
-            className="object-contain"
-            priority
+            width={100}
+            height={100}
+            className="w-25 h-15 md:w-28 md:h-18"
           />
         </Link>
         <div>
