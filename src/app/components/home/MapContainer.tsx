@@ -1,5 +1,6 @@
 import { MarkersProps } from "@/types/google-maps/types";
 import MapWraper from "../google-maps/MapWraper";
+import WorkList from "./WorkList";
 
 export default function MapContainer({
   locations,
@@ -11,8 +12,8 @@ export default function MapContainer({
   onLocationSelect: (location: MarkersProps) => void;
 }) {
   return (
-    <div className="flex flex-col h-full gap-4">
-      <div className="flex flex-col gap-2 md:w-1/2 overflow-y-auto bg-red-300 h-10">
+    <div className="flex flex-col md:flex-row h-full gap-4 md:pt-8 w-full justify-center">
+      {/* <div className="flex flex-col gap-2 md:w-1/2 overflow-y-auto bg-red-300 h-10">
         {locations.map((location) => (
           <div
             key={location.key}
@@ -32,9 +33,15 @@ export default function MapContainer({
             )}
           </div>
         ))}
+      </div> */}
+
+      <div className="w-full md:w-1/2 lg:w-1/4">
+        <div>
+          <WorkList works={locations} />
+        </div>
       </div>
 
-      <div className="md:w-1/2 bg-blue-300 h-80">
+      <div className="w-full md:w-1/2 h-80 md:h-100 lg:w-1/2">
         <MapWraper
           locations={locations}
           selectedLocation={selectedLocation}

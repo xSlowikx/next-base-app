@@ -98,14 +98,12 @@ export default function HomePage() {
 
   return (
     <>
-      <main className="min-h-screen w-full bg-red-300">
+      <main className="min-h-screen w-full">
         <section className="p-4 md:bg-[F6EFE5] ">
           <article className="flex flex-col flex-wrap">
-            <h1 className="text-center text-2xl font-bold mb-4">
-              Welcome to Home Section
-            </h1>
-
-            {/* <SearchAndFilter
+            {/* 
+            TODO: ADAPTAR LOGICA DE ESTE COMPONENTE AL 'SearchBar' nuevo
+            <SearchAndFilter
               handleFilterByMatching={handleFilterByMatching}
               selectedMatcher={selectedMatcher}
             /> */}
