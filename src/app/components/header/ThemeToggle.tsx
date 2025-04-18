@@ -33,7 +33,7 @@ const ThemeToggle = () => {
   return (
     <>
       {smallScreen ? (
-        <div className="flex items-center justify-center w-10 h-10  bg-[#aab9a5] rounded-full">
+        <div className="flex items-center justify-center w-8 h-8  bg-[#aab9a5] rounded-full">
           {activedTheme === "moon" ? (
             <button
               onClick={() => handleToggle("sun")}

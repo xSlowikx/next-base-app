@@ -26,7 +26,10 @@ export default function UserDropdown() {
   }, []);
 
   return (
-    <div className="relative inline-block" ref={dropdownRef}>
+    <div
+      className="relative inline-block border-1 border-[#4f7a44] rounded-full p-1"
+      ref={dropdownRef}
+    >
       {/* Botón del avatar */}
       <button
         id="avatarButton"
@@ -37,7 +40,7 @@ export default function UserDropdown() {
         aria-controls="userDropdown"
       >
         <Image
-          className="w-10 h-10 rounded-full cursor-pointer "
+          className="w-9 h-9 rounded-full cursor-pointer "
           src="/docenza.png"
           alt="User dropdown"
           width={40}

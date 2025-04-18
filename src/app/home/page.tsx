@@ -3,6 +3,7 @@ import { MarkersProps, MatcherTypes } from "@/types/google-maps/types";
 import MapContainer from "../components/home/MapContainer";
 import React, { useState } from "react";
 import SearchAndFilter from "../components/home/SearchAndFilter";
+import SearchBar from "../components/home/SearchBar";
 
 const locations: MarkersProps[] = [
   {
@@ -104,10 +105,12 @@ export default function HomePage() {
               Welcome to Home Section
             </h1>
 
-            <SearchAndFilter
+            {/* <SearchAndFilter
               handleFilterByMatching={handleFilterByMatching}
               selectedMatcher={selectedMatcher}
-            />
+            /> */}
+
+            <SearchBar />
 
             <MapContainer
               locations={filteredLocations}
