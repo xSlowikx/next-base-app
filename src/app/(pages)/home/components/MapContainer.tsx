@@ -1,6 +1,6 @@
 import { MarkersProps } from "@/types/google-maps/types";
-import MapWraper from "../google-maps/MapWraper";
 import WorkList from "./WorkList";
+import MapWraper from "@/components/google-maps/MapWraper";
 
 export default function MapContainer({
   locations,

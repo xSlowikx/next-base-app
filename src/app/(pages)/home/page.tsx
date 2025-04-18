@@ -1,9 +1,8 @@
 "use client";
 import { MarkersProps, MatcherTypes } from "@/types/google-maps/types";
-import MapContainer from "../components/home/MapContainer";
 import React, { useState } from "react";
-import SearchAndFilter from "../components/home/SearchAndFilter";
-import SearchBar from "../components/home/SearchBar";
+import SearchBar from "./components/SearchBar";
+import MapContainer from "./components/MapContainer";
 
 const locations: MarkersProps[] = [
   {

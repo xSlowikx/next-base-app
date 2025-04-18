@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "../lib/fontawesome";
-import Header from "./components/shared/Header";
-import Footer from "./components/shared/Footer";
+import Header from "../components/shared/Header";
+import Footer from "../components/shared/Footer";
 // import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
