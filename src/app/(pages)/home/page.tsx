@@ -3,6 +3,8 @@ import { MarkersProps, MatcherTypes } from "@/types/google-maps/types";
 import React, { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import MapContainer from "./components/MapContainer";
+import NonTeachingJobsCard from "./components/NonTeachingJobsCard";
+import NonTeachingCategories from "./components/NonTeachingCategories";
 
 const locations: MarkersProps[] = [
   {
@@ -97,8 +99,8 @@ export default function HomePage() {
 
   return (
     <>
-      <main className="min-h-screen w-full">
-        <section className="p-4 md:bg-[F6EFE5] ">
+      <main className="min-h-screen w-full max-w-6xl mx-auto py-4">
+        <section>
           <article className="flex flex-col flex-wrap">
             {/* 
             TODO: ADAPTAR LOGICA DE ESTE COMPONENTE AL 'SearchBar' nuevo
@@ -115,6 +117,12 @@ export default function HomePage() {
               onLocationSelect={handleLocationSelect}
             />
           </article>
+        </section>
+
+        <section className="w-full flex flex-col md:flex-row items-center px-2 pt-4 md:pt-6 lg:pt-10">
+          <NonTeachingJobsCard />
+
+          <NonTeachingCategories />
         </section>
       </main>
     </>

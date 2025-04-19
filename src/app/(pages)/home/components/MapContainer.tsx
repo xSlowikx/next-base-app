@@ -12,7 +12,7 @@ export default function MapContainer({
   onLocationSelect: (location: MarkersProps) => void;
 }) {
   return (
-    <div className="flex flex-col md:flex-row h-full gap-4 md:pt-8 w-full justify-center">
+    <div className="flex flex-col md:flex-row h-full gap-4 md:pt-8 w-full justify-center p-2 md:p-0">
       {/* <div className="flex flex-col gap-2 md:w-1/2 overflow-y-auto bg-red-300 h-10">
         {locations.map((location) => (
           <div
@@ -35,13 +35,13 @@ export default function MapContainer({
         ))}
       </div> */}
 
-      <div className="w-full md:w-1/2 lg:w-1/4">
+      <div className="w-full md:w-1/2 lg:w-1/2">
         <div>
           <WorkList works={locations} />
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 h-80 md:h-100 lg:w-1/2">
+      <div className="w-full md:w-1/2 h-80 md:h-100 lg:w-full">
         <MapWraper
           locations={locations}
           selectedLocation={selectedLocation}
